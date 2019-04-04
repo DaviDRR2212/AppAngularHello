@@ -1,0 +1,51 @@
+<!--<form (submit)="anyadirPiloto(nombre.value, apellidos.value, escuderia.value, avatar.value)">-->
+<!-- <form (submit)="anyadirPiloto()">  
+  <fieldset>
+    <legend>Formulario Nuevo Piloto</legend>
+    <p>
+      <input type="text"
+        name="nombre" 
+        [(ngModel)]="piloto.nombre"
+        placeholder="Nombre Piloto"/>
+    </p>
+    <p>
+      <input type="text"
+        name="apellidos" 
+        [(ngModel)]="piloto.apellidos"
+        placeholder="Apellido Piloto"/>
+    </p>
+    <p>
+      <input type="text"
+        name="escuderia" 
+        [(ngModel)]="piloto.escuderia"
+        placeholder="Escuderia Piloto"/>
+    </p>
+    <p>
+      <input type="text"
+        name="avatar" 
+        [(ngModel)]="piloto.avatar"
+        placeholder="Avatar Piloto"/>
+    </p>
+    <p>
+      <input type="submit" value="Alta"/>
+    </p>
+  </fieldset>
+</form> -->
+<form (submit)="anyadirPiloto()">
+    <fieldset class="form-group">
+    <legend>Formular Añadir Piloto</legend>
+    <div class="form-group">
+      <input type="text" name="nombre" class="form-control" [(ngModel)]="piloto.nombre" placeholder="Nombre Piloto">
+    </div>
+    <div class="form-group">
+      <input type="text" name="apellidos" class="form-control" [(ngModel)]="piloto.apellidos" placeholder="Apellidos Piloto">
+    </div>
+    <div class="form-group">
+        <input type="text" name="escuderia" class="form-control" [(ngModel)]="piloto.escuderia" placeholder="Escuderia">
+      </div>
+      <div class="form-group">
+        <input type="text" name="nombre" class="form-control" [(ngModel)]="piloto.avatar" placeholder="Avatar">
+      </div>
+    <button type="submit" class="btn btn-primary">Alta</button>
+    </fieldset>
+  </form>

@@ -1,0 +1,10 @@
+<form class="form-signin" (submit)="autenticarUsuario()">
+  <img class="mb-4" src="{{ imageLogin }}" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Por favor, Logueate</h1>
+  <label for="inputUsername" class="sr-only">Username</label>
+  <input type="email" id="inputUsername" name="username" class="form-control" placeholder="Username" [(ngModel)]="usuario.username">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" [(ngModel)]="usuario.password">
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+  <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+</form>

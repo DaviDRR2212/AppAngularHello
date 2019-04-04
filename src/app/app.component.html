@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container" style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>
+  <h3>
+    {{ subtitle }}
+    <br>    
+  </h3>  
+    <div *ngIf="usuarioLogado; else login">
+      <br>
+        <img class="img300w" alt="Formula1" [src]="logoF1">
+        <br><br>
+      <app-lista-pilotos></app-lista-pilotos>
+      <br><br>
+      <div class="row">
+        <div class="col-sm">
+          <app-alta-piloto (new-Pilot)="newItem()"></app-alta-piloto>
+        </div>
+        <div class="col-sm">
+            <app-lista-bolidos></app-lista-bolidos>
+        </div>
+      </div>
+      <br><br>
+    </div>
+    <ng-template #login>
+      <!--<app-login (comprobarUsuario)="comprobarUsuario($event)"></app-login>-->
+      <app-login (comprobarUsuario)="comprobarUsuario()"></app-login>
+      <div class="alert alert-danger" role="alert" *ngIf="msg != ''">
+        {{ msg }}
+      </div>
+    </ng-template>
+    <p>
+      <ngb-alert [dismissible]="false">
+        <strong>Primera Web en Angular por {{ author }} ;)</strong>
+      </ngb-alert>
+    </p>
+</div>

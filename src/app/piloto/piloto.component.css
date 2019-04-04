@@ -1,0 +1,26 @@
+p, h3 {
+    color: darkblue;
+}
+
+.img300w {
+    width: 300px;
+}
+
+table {
+    margin: auto;
+}
+
+th {
+    color: purple;
+}
+
+.avatar {
+    width: 150px;
+    height: 100px;
+}
+
+.personal-card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}

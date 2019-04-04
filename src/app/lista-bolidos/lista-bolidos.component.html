@@ -1,0 +1,6 @@
+<div class="contariner">
+  <h3>Listado de Coches</h3>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let bolido of bolidos$ | async | slice:1:bolidos$.length; let i = index">{{ bolido | uppercase | reversex}}</li>
+  </ul>
+</div>

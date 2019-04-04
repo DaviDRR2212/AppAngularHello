@@ -1,0 +1,20 @@
+<!-- <td>{{ indice }}</td>
+<td>{{ data.nombreCompleto }}</td>
+<td>{{ data.escuderia }}</td>
+<td><img class="avatar" [src]="getRutaAvatar(data.avatar)"></td>
+<td><button type="button" class="btn btn-danger" (click)="borrar(indice)">Borrar Piloto</button></td>
+ -->
+
+ <div class="card text-center" style="width: 18rem;">
+    <img class="card-img-top" [src]="getRutaAvatar(data.avatar)">
+    <div class="card-body">
+      <h5 class="card-title">{{ indice }}.- {{ data.nombreCompleto }}</h5>
+      <p class="card-text">Piloto de {{ data.escuderia }}</p>
+    </div>
+    <div class="card-body">
+      <div class="btn-group" role="group" aria-label=""> 
+        <button type="button" class="btn btn-danger" (click)="borrar(indice)">Borrar Piloto</button>
+        <button type="button" class="btn btn-warning" >Actualiza Piloto</button>
+      </div>     
+    </div>
+  </div>

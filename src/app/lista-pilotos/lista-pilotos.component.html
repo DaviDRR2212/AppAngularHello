@@ -1,0 +1,30 @@
+<!-- <table class="table" *ngIf="_pilotos.length > 0 && mostrarPilotos; else esperando">
+  <thead class="thead-light">
+    <tr>
+      <th>#</th>
+      <th>Nombre Completo</th>
+      <th>Escuderia</th>
+      <th>Avatar</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="mostrarPilotos">
+    <tr app-piloto *ngFor="let piloto of _pilotos;index as i" 
+      [data]="piloto" 
+      [indice]="i+1"
+      (itemBorrado)="borrarItem($event)"></tr>
+  </tbody>
+</table> -->
+<div *ngIf="_pilotos.length > 0 && mostrarPilotos; else esperando">
+    <br>
+  <h3>Datos Pilotos</h3>
+  <br>
+  <div class="card-columns">
+<app-piloto *ngFor="let piloto of _pilotos;index as i" [data]="piloto" [indice]="i+1" (itemBorrado)="borrarItem($event)"></app-piloto>
+</div>
+</div>
+<ng-template #esperando>
+  <p><strong>Esperando datos...</strong></p>
+</ng-template>
+<br>
+<button type="button" class="btn btn-info" (click)="verPilotos()">{{operacion}} Pilotos</button>
